@@ -47,7 +47,7 @@ const DisplayExistingResume = () => {
         color: val || '#4e31aa',
       };
 
-    const handleDownloadPDF = () => {
+      const handleDownloadPDF = () => {
         const element = document.getElementById('tableContent');
 
         const elementHeight = element.offsetHeight;
