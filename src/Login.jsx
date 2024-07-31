@@ -92,11 +92,7 @@ const Login = () => {
                         onClick={() => navigate('/')}
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
-                        <img
-                            src="https://img.icons8.com/?size=100&id=TF9VCgblG6vy&format=png&color=000000"
-                            className="h-8"
-                            alt="Flowbite Logo"
-                        />
+                       
                         <span
                             className="self-center text-2xl font-semibold whitespace-nowrap text-[#4e31aa] "
                            
