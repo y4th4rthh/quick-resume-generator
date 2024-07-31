@@ -49,15 +49,27 @@ const DisplayExistingResume = () => {
 
     const handleDownloadPDF = () => {
         const element = document.getElementById('tableContent');
+
+        const elementHeight = element.offsetHeight;
+        const elementWidth = element.offsetWidth;
+    
+        const pageHeightInInches = (elementHeight +1) / 96;
+        const pageWidthInInches = (elementWidth +1) / 96;
         const options = {
-            format: 'A3',
-            filename: 'hall_ticket.pdf',
-            pagebreak: { mode: 'avoid-all' },
+            margin: [0, 0, 0, 0],
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: [pageWidthInInches, pageHeightInInches], orientation: 'portrait' },
+            filename: 'resume.pdf',
         };
         htmlpdf()
             .from(element)
             .set(options)
-            .save('hall_ticket.pdf');
+            .save('resume.pdf')
+            .then(() => {
+                const pdf = new jsPDF(options.jsPDF);
+                pdf.deletePage(pdf.internal.getNumberOfPages());
+            });
     };
 
     if (!resumeData) {
