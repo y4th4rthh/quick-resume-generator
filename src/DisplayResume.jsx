@@ -41,7 +41,7 @@ const DisplayResume = () => {
 
     
 
-     const handleDownloadPDF = () => {
+    const handleDownloadPDF = () => {
         const element = document.getElementById('tableContent');
 
         const elementHeight = element.offsetHeight;
