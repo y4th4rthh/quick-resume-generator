@@ -150,7 +150,7 @@ const DisplayExistingResume = () => {
                                                         <div>
                                                             <h5 className='text-sm font-medium uppercase  mt-3 pb-2 text-black'>• Technlogies used:</h5>
                                                             <div className='flex flex-wrap justify-start '>
-                                                            <p className="text-gray-700">T</p>
+                                                            <p className="text-gray-700">{resumeData.lang1}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -160,7 +160,7 @@ const DisplayExistingResume = () => {
                                                         <div>
                                                             <h5 className='text-sm font-medium uppercase  mt-3 pb-2 text-black'>• Technlogies used:</h5>
                                                             <div className='flex flex-wrap justify-start '>
-                                                            <p className="text-gray-700">T</p>
+                                                            <p className="text-gray-700">{resumeData.lang2}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -170,7 +170,7 @@ const DisplayExistingResume = () => {
                                                         <div>
                                                             <h5 className='text-sm font-medium uppercase  mt-3 pb-2 text-black'>• Technlogies used:</h5>
                                                             <div className='flex flex-wrap justify-start '>
-                                                            <p className="text-gray-700">T</p>
+                                                            <p className="text-gray-700">{resumeData.lang3}</p>
                                                             </div>
                                                         </div>
                                                     </div>
