@@ -1,5 +1,7 @@
 # QuickResumeGenerator
 
+![Project Preview](./preview/qr.png)
+
 ## Cloning and Running the Vite Project Locally
 
 ### `git clone https://github.com/y4th4rthh/quick-resume-generator`
