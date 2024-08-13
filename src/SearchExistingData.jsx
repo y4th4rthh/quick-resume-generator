@@ -75,11 +75,7 @@ const SearchExistingData = () => {
                         onClick={() => navigate('/')}
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
-                        <img
-                            src="https://img.icons8.com/?size=100&id=23882&format=png&color=7970F6"
-                            className="h-8"
-                            alt="Flowbite Logo"
-                        />
+                        
                         <span
                             className="self-center text-2xl font-semibold whitespace-nowrap text-[#4e31aa]"
                         >
@@ -115,7 +111,7 @@ const SearchExistingData = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 text-white md:hover:text-[#4e31aa]  bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] md:p-0 "
+                                    className="block py-2 px-3 text-white md:hover:text-white  bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] md:p-0 "
                                     aria-current="page"
                                 >
                                     Get Existing Datas
