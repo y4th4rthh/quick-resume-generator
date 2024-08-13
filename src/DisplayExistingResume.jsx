@@ -14,7 +14,7 @@ const DisplayExistingResume = () => {
         const fetchData = async () => {
             console.log(usrData);
             try {
-                const response = await axios.get(`http://localhost:5000/api/search`, {
+                const response = await axios.get(`https://quick-resume-backend.onrender.com/api/search`, {
                     params: {
                         email: usrData.email,
                         fullName: usrData.fullName
