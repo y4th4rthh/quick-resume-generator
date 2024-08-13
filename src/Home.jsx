@@ -144,10 +144,10 @@ const Home = () => {
                     <div className="flex justify-center space-x-8 mt-8 animate-fadeIn">
                         <div className="transition transform hover:scale-110">
                             <h3 className="text-xl font-bold">500+</h3>
-                            <p className="text-gray-700">Resume Templates</p>
+                            <p className="text-gray-700">Color Templates</p>
                         </div>
                         <div className="transition transform hover:scale-110">
-                            <h3 className="text-xl font-bold">10+</h3>
+                            <h3 className="text-xl font-bold">1+</h3>
                             <p className="text-gray-700">Years of Service</p>
                         </div>
                     </div>
