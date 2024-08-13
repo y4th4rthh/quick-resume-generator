@@ -188,7 +188,7 @@ const SearchExistingData = () => {
                                     <input
                                         type="text"
                                         id="fname"
-                                        className='bg-gray-200'
+                                        className='bg-gray-200 text-black'
                                         name="fullName"
                                         value={formData.fullName}
                                         onChange={handleInputChange}
@@ -207,7 +207,7 @@ const SearchExistingData = () => {
                                         type="email"
                                         id="email"
                                         name="email"
-                                        className='bg-gray-200'
+                                        className='bg-gray-200 text-black'
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
