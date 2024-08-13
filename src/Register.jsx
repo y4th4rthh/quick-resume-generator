@@ -66,7 +66,7 @@ const ResumeData = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/register', formData);
+            const response = await axios.post('https://quick-resume-backend.onrender.com/api/register', formData);
             console.log('Data sent to server:', response.data);
             navigate('/login', { state: { loginData: formData } });
         } catch (error) {
