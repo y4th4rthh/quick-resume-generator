@@ -118,7 +118,7 @@ const ResumeData = () => {
                             <li>
                                 <a
                                     
-                                    className="block py-2 px-3 text-white  bg-[#4e31aa] rounded md:bg-transparent hover:text-white md:text-[#4e31aa] md:p-0 "
+                                    className="block py-2 px-3 text-[#4e31aa] hover:text-[#4e31aa] bg-[#4e31aa] rounded md:bg-transparent hover:text-white md:text-[#4e31aa] md:p-0 "
                                     aria-current="page"
                                 >
                                     Home
