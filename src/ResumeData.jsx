@@ -195,7 +195,7 @@ const ResumeData = () => {
                 
             ) {
                 try {
-                    const response = await fetch('http://localhost:5000/api/resume', {
+                    const response = await fetch('https://quick-resume-backend.onrender.com/api/resume', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
