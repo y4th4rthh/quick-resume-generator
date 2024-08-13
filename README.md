@@ -2,6 +2,7 @@
 
 ![Project Preview](./preview/qr.png)
 
+
 ## Can run the Project through the below link:
 
 ### `https://main--quickresumee.netlify.app/`
