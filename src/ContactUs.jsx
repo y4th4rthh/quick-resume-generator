@@ -96,11 +96,7 @@ const ContactUs = () => {
                         onClick={() => navigate('/')}
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
-                        <img
-                            src="https://img.icons8.com/?size=100&id=TF9VCgblG6vy&format=png&color=000000"
-                            className="h-8"
-                            alt="Flowbite Logo"
-                        />
+                       
                         <span
                             className="self-center text-2xl font-semibold whitespace-nowrap text-[#4e31aa] "
                         >
@@ -146,7 +142,7 @@ const ContactUs = () => {
                             <li>
                                 <a
 
-                                    className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] hover:text-[#4e31aa] md:p-0 "
+                                    className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] hover:text-white md:p-0 "
                                     aria-current="page"
                                 >
                                     Contact
