@@ -111,7 +111,7 @@ const SearchExistingData = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 text-white md:hover:text-white  bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] md:p-0 "
+                                    className="block py-2 px-3 hover:text-[#4e31aa] text-[#4e31aa] md:hover:text-white  bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] md:p-0 "
                                     aria-current="page"
                                 >
                                     Get Existing Datas
