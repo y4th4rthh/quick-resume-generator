@@ -43,7 +43,7 @@ const Login = () => {
         const { fullName, pass, email } = formData;
 
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch('https://quick-resume-backend.onrender.com/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
