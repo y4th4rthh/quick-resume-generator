@@ -2,6 +2,10 @@
 
 ![Project Preview](./preview/qr.png)
 
+## Can run the Project through the below link:
+
+### `https://main--quickresumee.netlify.app/`
+
 ## Cloning and Running the Vite Project Locally
 
 ### `git clone https://github.com/y4th4rthh/quick-resume-generator`
