@@ -13,7 +13,7 @@ const DisplayResume = () => {
         const fetchData = async () => {
             try {
                 console.log('Fetching data for:', usrData.color);
-                const response = await axios.get(`http://localhost:5000/api/resumeData?email=${usrData.email}`);
+                const response = await axios.get(`https://quick-resume-backend.onrender.com/api/resumeData?email=${usrData.email}`);
                 const filteredData = response.data.find(item => item.email === usrData.email);
                 setResumeData(filteredData);
                 console.log('Fetched resumeData:', filteredData);
