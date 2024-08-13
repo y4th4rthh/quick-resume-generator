@@ -190,18 +190,18 @@ const ContactUs = () => {
                     </div>
                 </div>
             </nav>
-            <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+            <div className="relative flex items-top justify-center min-h-screen bg-white  sm:items-center sm:pt-0">
                 <div className="max-w-6xl mx-auto my-auto sm:px-6 lg:px-8">
                     <div className="mt-8 overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2">
-                            <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-                                <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+                            <div className="p-6 mr-2 bg-gray-100  sm:rounded-lg">
+                                <h1 className="text-4xl sm:text-5xl text-gray-800 e font-extrabold tracking-tight">
                                     Contact Us
                                 </h1>
-                                <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+                                <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600  mt-2">
                                     Have questions or need help? Fill out the form and we'll get back to you.
                                 </p>
-                                <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
+                                <div className="flex items-center mt-8 text-gray-600 ">
                                     <svg
                                         fill="none"
                                         stroke="currentColor"
@@ -222,7 +222,7 @@ const ContactUs = () => {
                                         +91 1234567890
                                     </div>
                                 </div>
-                                <div className="flex items-center mt-4 text-gray-600 dark:text-gray-400">
+                                <div className="flex items-center mt-4 text-gray-600 ">
                                     <svg
                                         fill="none"
                                         stroke="currentColor"
@@ -258,7 +258,7 @@ const ContactUs = () => {
                                         value={formData.fullName}
                                         onChange={handleInputChange}
                                         placeholder="Full Name"
-                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
+                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
                                     />
                                 </div>
                                 <div className="flex flex-col mt-2">
@@ -272,7 +272,7 @@ const ContactUs = () => {
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         placeholder="Email"
-                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
+                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
                                     />
                                 </div>
                                 <div className="flex flex-col mt-2">
@@ -285,7 +285,7 @@ const ContactUs = () => {
                                         value={formData.message}
                                         onChange={handleInputChange}
                                         placeholder="Your Message"
-                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
+                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
                                         
                                     />
                                 </div>
@@ -296,7 +296,7 @@ const ContactUs = () => {
                                 >
                                     Submit
                                 </button>
-                                <p className="leading-relaxed text-xl text-gray-900 dark:text-gray-300 mt-8">
+                                <p className="leading-relaxed text-xl text-gray-900 mt-8">
                                     We value your privacy and use VeilMail.io to{" "}
                                     <a
                                         className="font-medium text-[#4e31aa] hover:text-[#4e31aa]  hover:underline"
