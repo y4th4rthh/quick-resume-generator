@@ -262,7 +262,7 @@ const ContactUss = () => {
                                         value={formData.fullName}
                                         onChange={handleInputChange}
                                         placeholder="Full Name"
-                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
+                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-black font-semibold focus:border-[#4e31aa] focus:outline-none"
                                     />
                                 </div>
                                 <div className="flex flex-col mt-2">
@@ -276,7 +276,7 @@ const ContactUss = () => {
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         placeholder="Email"
-                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
+                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400  text-black font-semibold focus:border-[#4e31aa] focus:outline-none"
                                     />
                                 </div>
                                 <div className="flex flex-col mt-2">
@@ -289,7 +289,7 @@ const ContactUss = () => {
                                         value={formData.message}
                                         onChange={handleInputChange}
                                         placeholder="Your Message"
-                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400  text-gray-800 font-semibold focus:border-[#4e31aa] focus:outline-none"
+                                        className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400  text-black font-semibold focus:border-[#4e31aa] focus:outline-none"
                                     />
                                 </div>
                                 <button
