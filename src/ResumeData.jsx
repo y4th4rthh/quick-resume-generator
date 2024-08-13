@@ -371,7 +371,7 @@ const ResumeData = () => {
                                     id="fname"
                                     name="fullName"
                                     value={formData.fullName}
-                                    className=" bg-gray-100 "
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out', color: '#000' }}
                                     placeholder="Enter Your Full Name"
@@ -388,7 +388,7 @@ const ResumeData = () => {
                                     id="lname"
                                     name="dept"
                                     value={formData.dept}
-                                    className=" bg-gray-100"
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Enter Your Branch Name"
@@ -405,7 +405,7 @@ const ResumeData = () => {
                                     id="phone"
                                     name="phone"
                                     value={formData.phone}
-                                    className=" bg-gray-100"
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Enter Your Phone Number"
@@ -423,7 +423,7 @@ const ResumeData = () => {
                                     id="email"
                                     name="email"
                                     value={formData.email}
-                                    className=" bg-gray-100"
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Enter Your Email Address"
@@ -441,7 +441,7 @@ const ResumeData = () => {
                                     id="gitlink"
                                     name="gitlink"
                                     value={formData.gitlink}
-                                    className=" bg-gray-100"
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Enter Your Github Link"
@@ -459,7 +459,7 @@ const ResumeData = () => {
                                     id="summary"
                                     name="summary"
                                     value={formData.summary}
-                                    className=" bg-gray-100"
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Describe Yourself"
@@ -478,7 +478,7 @@ const ResumeData = () => {
                                     name="graduationInstitute"
                                     value={formData.graduationInstitute}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Institute Name"
                                     required
@@ -489,7 +489,7 @@ const ResumeData = () => {
                                     name="graduationQualification"
                                     value={formData.graduationQualification}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Qualification Name, Degree (Percentage%)"
                                     required
@@ -500,7 +500,7 @@ const ResumeData = () => {
                                     id="graduationYear"
                                     name="graduationYear"
                                     value={formData.graduationYear}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="(Year of Passing)"
@@ -519,7 +519,7 @@ const ResumeData = () => {
                                     name="twelfthInstitute"
                                     value={formData.twelfthInstitute}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Institute Name"
                                     required
@@ -528,7 +528,7 @@ const ResumeData = () => {
                                     type="text"
                                     id="twelfthQualification"
                                     name="twelfthQualification"
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     value={formData.twelfthQualification}
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
@@ -541,7 +541,7 @@ const ResumeData = () => {
                                     id="twelfthYear"
                                     name="twelfthYear"
                                     value={formData.twelfthYear}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="(Year of Passing)"
@@ -565,7 +565,7 @@ const ResumeData = () => {
                                     type="text"
                                     id="skillsFE"
                                     name="skillsFE"
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     value={formData.skillsFE}
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
@@ -577,7 +577,7 @@ const ResumeData = () => {
                                     type="text"
                                     id="skillsBE"
                                     name="skillsBE"
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     value={formData.skillsBE}
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
@@ -590,7 +590,7 @@ const ResumeData = () => {
                                     id="skillsOther"
                                     name="skillsOther"
                                     value={formData.skillsOther}
-                                    className=" bg-gray-100"
+                                    className=" bg-gray-100 text-black"
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                     placeholder="Any Other"
@@ -613,7 +613,7 @@ const ResumeData = () => {
                                     placeholder="Project Name"
                                     value={formData.project1}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -625,7 +625,7 @@ const ResumeData = () => {
                                     placeholder="Project Description"
                                     value={formData.projectdes1}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -637,7 +637,7 @@ const ResumeData = () => {
                                     placeholder="Technologies used"
                                     value={formData.lang1}
                                     onChange={handleInputChange}
-                                    className="mb-4 bg-gray-100"
+                                    className="mb-4 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -655,7 +655,7 @@ const ResumeData = () => {
                                     placeholder="Project Name"
                                     value={formData.project2}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -667,7 +667,7 @@ const ResumeData = () => {
                                     placeholder="Project Description"
                                     value={formData.projectdes2}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -679,7 +679,7 @@ const ResumeData = () => {
                                     placeholder="Technologies used"
                                     value={formData.lang3}
                                     onChange={handleInputChange}
-                                    className="mb-4 bg-gray-100"
+                                    className="mb-4 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -697,7 +697,7 @@ const ResumeData = () => {
                                     placeholder="Project Name"
                                     value={formData.project3}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -709,7 +709,7 @@ const ResumeData = () => {
                                     placeholder="Project Description"
                                     value={formData.projectdes3}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -721,7 +721,7 @@ const ResumeData = () => {
                                     placeholder="Technologies used"
                                     value={formData.lang3}
                                     onChange={handleInputChange}
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     required
                                 />
 
@@ -735,7 +735,7 @@ const ResumeData = () => {
                                     type="text"
                                     id="choosecolor"
                                     name="choosecolor"
-                                    className="mb-2 bg-gray-100"
+                                    className="mb-2 bg-gray-100 text-black"
                                     value={formData.choosecolor}
                                     onChange={handleInputChange}
                                     style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
