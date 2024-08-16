@@ -1,4 +1,4 @@
-# QuickResumeGenerator
+# Quick Resume
 
 ![Project Preview](./preview/qr.png)
 
