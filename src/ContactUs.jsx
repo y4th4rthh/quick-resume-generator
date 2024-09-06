@@ -190,7 +190,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </nav>
-            <div className="relative flex items-top justify-center min-h-screen bg-white  sm:items-center sm:pt-0">
+            <div className="relative flex items-top justify-center min-h-screen bg-white  sm:items-center mt-28 sm:mt-0 sm:pt-0">
                 <div className="max-w-6xl mx-auto my-auto sm:px-6 lg:px-8">
                     <div className="mt-8 overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2">
