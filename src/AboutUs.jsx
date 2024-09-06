@@ -129,7 +129,7 @@ const AboutUs = () => {
                 </section>
 
                 <section className="text-center py-12 px-4">
-                    <h2 className="text-2xl font-bold">Our Story</h2>
+                    <h2 className="text-2xl font-bold text-black">Our Story</h2>
                     <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
                         We started with a vision to simplify the job application process. Our journey began a decade ago, and today we are proud to serve millions of job seekers worldwide.
                     </p>
@@ -160,7 +160,7 @@ const AboutUs = () => {
                 </section>
 
                 <section className="text-center py-12 px-4">
-                    <h2 className="text-2xl font-bold">Meet the Team</h2>
+                    <h2 className="text-2xl font-bold text-black">Meet the Team</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
                         <div className="p-4 shadow-lg rounded-lg  hover:bg-[#7769a5] bg-[#a997df]  hover:text-white transition-colors">
                             <h3 className="text-xl font-bold">XYZ</h3>
@@ -182,16 +182,16 @@ const AboutUs = () => {
                 </section>
 
                 <section className="bg-gray-100 py-12 px-4">
-                    <h2 className="text-2xl font-bold text-center">Our Achievements</h2>
+                    <h2 className="text-2xl font-bold text-center text-black">Our Achievements</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
                         <div className="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
-                            <h3 className="text-xl font-bold">Award-Winning Tools</h3>
+                            <h3 className="text-xl font-bold text-gray-700">Award-Winning Tools</h3>
                             <p className="text-gray-700 mt-2">
                                 Recognized globally for our innovative and user-friendly resume-building tools.
                             </p>
                         </div>
                         <div className="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
-                            <h3 className="text-xl font-bold">Global Reach</h3>
+                            <h3 className="text-xl font-bold text-gray-700">Global Reach</h3>
                             <p className="text-gray-700 mt-2">
                                 Helping job seekers in over 50 countries with multi-language support.
                             </p>
@@ -200,7 +200,7 @@ const AboutUs = () => {
                 </section>
 
                 <section className="text-center bg-[#4e31aa] py-12 px-4">
-                    <h2 className="text-2xl font-bold text-white">Our Commitment</h2>
+                    <h2 className="text-2xl font-bold text-white text-gray-700">Our Commitment</h2>
                     <p className="mt-4 text-white max-w-2xl mx-auto">
                         We are committed to providing the best tools and resources to help job seekers achieve their career goals.
                     </p>
