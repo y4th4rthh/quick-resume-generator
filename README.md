@@ -3,9 +3,7 @@
 ![Project Preview](./preview/qr.png)
 
 
-## Can run the Project through the below link:
-
-### `https://main--quickresumee.netlify.app/`
+Access the live project: [https://main--quickresumee.netlify.app/](https://main--quickresumee.netlify.app/)
 
 ## Cloning and Running the Vite Project Locally
 
