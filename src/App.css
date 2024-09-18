@@ -6,7 +6,7 @@
 }
 
 ::selection {
-  background-color: #4e31aa; /* desired selection color */
+  background-color: rgba(78, 49, 170, 0.5);
 }
 
 .logo {
