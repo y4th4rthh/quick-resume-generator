@@ -268,7 +268,7 @@ const DisplayExistingResume = () => {
                 </div>
 
             </div>
-            <div className="mt-12 flex justify-center bg-white  w-full z-20 border-t border-gray-200 py-2 " style={{ height: '70px' }}>
+            <div className="mt-4 flex justify-center bg-white  w-full z-20 border-t border-gray-200 py-2 " style={{ height: '70px' }}>
                 <div className="text-sm mt-4 text-black">
                     Made with ❤️ by <a href="https://www.bing.com/videos/riverview/relatedvideo?q=roll+rick+astley&mid=4E7B1C0F8E67E9F7B1364E7B1C0F8E67E9F7B136&FORM=VIRE" className='text-[#4e31aa]'>y4th4rthh</a>
                 </div>
