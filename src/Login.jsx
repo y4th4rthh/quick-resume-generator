@@ -80,7 +80,7 @@ const Login = () => {
     };
 
     return (
-        <div className='font-rubik'>
+        <div className='font-rubik bg-[#F3F4F6]'>
             <ToastContainer />  
           <nav
                 className="bg-white  w-full z-20 start-0 border-b border-gray-200 "
