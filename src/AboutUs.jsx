@@ -131,7 +131,7 @@ const AboutUs = () => {
                 <section className="text-center py-12 px-4">
                     <h2 className="text-2xl font-bold text-black">Our Story</h2>
                     <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-                        We started with a vision to simplify the job application process. Our journey began a decade ago, and today we are proud to serve millions of job seekers worldwide.
+                        We started with a vision to simplify the job application process. Our journey began a year ago, and today we are proud to serve millions of job seekers worldwide.
                     </p>
                 </section>
 

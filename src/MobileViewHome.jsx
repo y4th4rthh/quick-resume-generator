@@ -43,16 +43,16 @@ const AboutUs = () => {
 
                 </div>
             </nav>
-            <div className="bg-white sm:mt-11 pt-32">
+            <div className="bg-white sm:mt-11 ">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
-                    <h1 className="text-4xl font-bold">About Us</h1>
-                    <p className="mt-4 text-lg">Learn more about our mission, values, and team.</p>
+                    <h1 className="text-4xl font-bold">Sorry :(</h1>
+                    <p className="mt-4 ">The website is currently unavailable for mobile devices. We are working on it! Please try again on a desktop or laptop.</p>
                 </section>
 
                 <section className="text-center py-12 px-4">
-                    <h2 className="text-2xl font-bold text-black">Sorry :(</h2>
+                    <h2 className="text-2xl font-bold text-black">About Us</h2>
                     <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-                        The website is currently unavailable for mobile devices. We are working on it! Please try again on a desktop or laptop.
+                    We started with a vision to simplify the job application process. Our journey began a year ago, and today we are proud to serve millions of job seekers worldwide.
                     </p>
                 </section>
 
