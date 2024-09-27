@@ -9,6 +9,7 @@ import DisplayExistingResume from "./DisplayExistingResume";
 import AboutUs from './AboutUs';
 import ContactUs from "./ContactUs";
 import ContactUss from "./ContactUss";
+import Help from "./Help";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route exact path="/" element={<Home/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/register" element={<Register/>} />
+                <Route path="/help" element={<Help/>} />
                 <Route path="/resume" element={<ResumeData/>} />
                 <Route path="/displayresume" element={<DisplayResume/>} />
                 <Route path="/search" element={<SearchExistingData/>} />

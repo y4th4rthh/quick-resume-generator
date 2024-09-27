@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const navigate = useNavigate();
+    const [isMobile, setIsMobile] = useState(false);
+
     const handleLogin = () => {
         navigate('/login');
     }
@@ -11,6 +13,28 @@ const Home = () => {
     const handleNavigateToAboutUs = () => {
         navigate('/aboutus');
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); 
+        };
+        handleResize(); 
+        window.addEventListener('resize', handleResize); 
+
+        return () => window.removeEventListener('resize', handleResize); 
+    }, []);
+
+    if (isMobile) {
+        return (
+            <div className='bg-white flex justify-center items-center h-screen'>
+            <div className='flex-col gap-6 justify-center items-center '>
+                <img src={errorcat} alt='error' className='w-fit' />
+                <div className='text-sm mt-2 text-black font-semibold sm:text-xl'>Sorry :(, the website is currently unavailable for mobile devices. We are working on it!</div>
+                <div className='bg-transparent cursor-pointer  rounded-md py-2 px-4 w-half text-black underline float-right text-sm sm:text-lg' onClick={() => window.location.href = '/help'}>Contact Us</div>
+            </div>
+        </div>
+        );
+    }
 
     return (
 
