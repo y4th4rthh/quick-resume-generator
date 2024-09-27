@@ -3,12 +3,13 @@ import Headerr from './Header';
 import axios from 'axios';
 import htmlpdf from 'html2pdf.js';
 import { useLocation } from 'react-router-dom';
+import errorcat from './errorcat.gif';
 
 const DisplayExistingResume = () => {
     const [resumeData, setResumeData] = useState(null);
     const location = useLocation();
     const { usrData } = location.state;
-    
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,7 +24,7 @@ const DisplayExistingResume = () => {
 
                 setResumeData(response.data);
 
-                
+
                 console.log('Fetched resumeData:', response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -41,20 +42,20 @@ const DisplayExistingResume = () => {
 
     const headerStyle = {
         color: val || '#4e31aa',
-      };
+    };
 
-      const headerListStyle = {
+    const headerListStyle = {
         color: val || '#4e31aa',
-      };
+    };
 
-      const handleDownloadPDF = () => {
+    const handleDownloadPDF = () => {
         const element = document.getElementById('tableContent');
 
         const elementHeight = element.offsetHeight;
         const elementWidth = element.offsetWidth;
-    
-        const pageHeightInInches = (elementHeight +1) / 96;
-        const pageWidthInInches = (elementWidth +1) / 96;
+
+        const pageHeightInInches = (elementHeight + 1) / 96;
+        const pageWidthInInches = (elementWidth + 1) / 96;
         const options = {
             margin: [0, 0, 0, 0],
             image: { type: 'jpeg', quality: 0.98 },
@@ -73,28 +74,55 @@ const DisplayExistingResume = () => {
     };
 
     if (!resumeData) {
-        return <div>Loading...</div>;
+        return <div className='bg-white flex justify-center items-center h-screen'>
+            <div className='flex-col gap-6 justify-center items-center '>
+                <img src={errorcat} alt='error' className='w-fit' />
+                <div className='text-sm mt-2 text-black font-semibold sm:text-xl'>Looks like something is wrong! Please try again :(</div>
+                <div className='bg-transparent cursor-pointer  rounded-md py-2 px-4 w-half text-black underline float-right text-sm sm:text-lg' onClick={() => window.location.href = '/resume'}>Go back</div>
+            </div>
+        </div>;
     }
 
+
+    const handleEditData = () => {
+        window.location.href = '/resume';
+    };
+
+    const handleDeleteData = async () => {
+        try {
+            const response = await axios.delete(`https://quick-resume-backend.onrender.com/api/delete`, {
+                data: {
+                    email: usrData.email,
+                    fullName: usrData.fullName
+                }
+            });
+            console.log('Deleted resume:', response.data);
+            window.location.href = '/resume';
+        } catch (error) {
+            console.error('Error deleting resume:', error);
+        }
+    }
+
+
     return (
-        <div className='font-rubik'>
+        <div className='bg-white font-rubik'>
             <Headerr />
-            <div className='flex-row justify-center mt-12 font-rubik mb-4' style={{ marginTop: '7rem' }}>
+            <div className='flex-row justify-center  font-rubik mb-4' style={{ paddingTop: '7rem' }}>
                 <div className='container'>
                 </div>
                 <div className='m-12'>
-                    <p className="text-black-500 text-5xl text-center font-bold">Resume Auto Generator</p>
+                    <p className="text-black text-5xl text-center font-bold">Resume Auto Generator</p>
 
                 </div>
                 <div className=' rounded-lg flex justify-center' style={{ marginLeft: '20%', marginRight: '20%' }}>
-                    <div className='container-fluid bg-gray-100' id='tableContent' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px',paddingBottom:'20px',  pageBreakInside: 'avoid' }}>
+                    <div className='container-fluid bg-gray-100' id='tableContent' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid' }}>
 
                         <table id="mytable" className='bg-white' style={{ borderCollapse: 'collapse', width: '250mm', height: '290mm', border: '0px solid gray', pageBreakInside: 'avoid' }}>
 
                             <tbody>
                                 <tr>
-                                    <td className='bg-gray-100' style={{border:'1px solid white'}} >
-                                      
+                                    <td className='bg-gray-100' style={{ border: '1px solid white' }} >
+
                                         <div className="text-gray-700 bg-gray-100">
                                             <header className="max-w-screen-lg mx-auto p-5">
                                                 <h1 className="text-center text-2xl font-medium uppercase text-[#4e31aa]" style={headerStyle}>{resumeData.fullName}</h1>
@@ -123,7 +151,7 @@ const DisplayExistingResume = () => {
                                                         <p className="text-gray-700">{resumeData.twelfthQualification}</p>
                                                         <p className="text-gray-700">({resumeData.twelfthYear})</p>
                                                     </div>
-                                                    
+
                                                 </div>
                                                 <div className="mb-6">
                                                     <h2 className="text-md font-medium uppercase border-b border-gray-400 pb-2 text-[#4e31aa]" style={headerStyle}>Skills</h2>
@@ -150,7 +178,7 @@ const DisplayExistingResume = () => {
                                                         <div>
                                                             <h5 className='text-sm font-medium uppercase  mt-3 pb-2 text-black'>• Technlogies used:</h5>
                                                             <div className='flex flex-wrap justify-start '>
-                                                            <p className="text-gray-700">{resumeData.lang1}</p>
+                                                                <p className="text-gray-700">{resumeData.lang1}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -160,7 +188,7 @@ const DisplayExistingResume = () => {
                                                         <div>
                                                             <h5 className='text-sm font-medium uppercase  mt-3 pb-2 text-black'>• Technlogies used:</h5>
                                                             <div className='flex flex-wrap justify-start '>
-                                                            <p className="text-gray-700">{resumeData.lang2}</p>
+                                                                <p className="text-gray-700">{resumeData.lang2}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -170,13 +198,13 @@ const DisplayExistingResume = () => {
                                                         <div>
                                                             <h5 className='text-sm font-medium uppercase  mt-3 pb-2 text-black'>• Technlogies used:</h5>
                                                             <div className='flex flex-wrap justify-start '>
-                                                            <p className="text-gray-700">{resumeData.lang3}</p>
+                                                                <p className="text-gray-700">{resumeData.lang3}</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </main>
-                                            
+
                                         </div>
                                     </td>
                                 </tr>
@@ -185,40 +213,62 @@ const DisplayExistingResume = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-center mt-12 mb-12'>
+                <div className='flex gap-4 justify-center mt-12 mb-12'>
                     <button
 
                         type="button"
                         className="bg-[#4e31aa] hover:bg-[#372379] rounded-md py-2 px-4 w-half text-white "
                         onClick={handleDownloadPDF}
                     >
-                        Download Your Resume
+                        Download Resume
+                    </button>
+
+                    <button
+
+                        type="button"
+                        className="bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4 w-half text-white "
+                        onClick={handleEditData}
+                    >
+                        Edit Your Resume
+                    </button>
+
+                    <button
+
+                        type="button"
+                        className="bg-red-500 hover:bg-red-600 rounded-md py-2 px-4 w-half text-white "
+                        onClick={handleDeleteData}
+                    >
+                        Delete Your Resume
                     </button>
                 </div>
                 <div className='mt-12'>
                     <marquee style={{ whiteSpace: 'nowrap', animation: 'scroll 20s linear infinite' }}>
-                        <ol className="text-gray-700 font-semibold text-sm text-right p-0 m-0 list-none">
+                        <ol className="text-black font-semibold text-sm text-right p-0 m-0 list-none">
                             <li className="inline-block ml-2">
-                                <span className="bullet">•</span> Click the "Download Hall Ticket" button above for downloading.
+                                <span className="bullet">•</span> Click the "Generate Resume" button above to start creating your resume.
                             </li>
                             <li className="inline-block ml-2">
-                                <span className="bullet">•</span> Verify that all information on the hall ticket is correct.
+                                <span className="bullet">•</span> Fill in all the required fields with accurate information.
                             </li>
                             <li className="inline-block ml-2">
-                                <span className="bullet">•</span> If any information is incorrect in the ticket, please contact support.
+                                <span className="bullet">•</span> Review your information carefully before finalizing your resume.
                             </li>
                             <li className="inline-block ml-2">
-                                <span className="bullet">•</span> Print a physical copy of the hall ticket for the examination.
+                                <span className="bullet">•</span> If you need to make changes, use the "Edit" button to update your details.
                             </li>
                             <li className="inline-block ml-2">
-                                <span className="bullet">•</span> If you encounter any issues during the download process, please contact support.
+                                <span className="bullet">•</span> Download your resume once you're satisfied with the information provided.
+                            </li>
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> For assistance or technical support, please contact our support team.
                             </li>
                         </ol>
+
                     </marquee>
                 </div>
 
             </div>
-            <div className="flex justify-center bg-white  fixed bottom-0 w-full z-20 border-t border-gray-200 py-2" style={{ height: '70px' }}>
+            <div className="mt-12 flex justify-center bg-white  w-full z-20 border-t border-gray-200 py-2 " style={{ height: '70px' }}>
                 <div className="text-sm mt-4 text-black">
                     Made with ❤️ by <a href="https://www.bing.com/videos/riverview/relatedvideo?q=roll+rick+astley&mid=4E7B1C0F8E67E9F7B1364E7B1C0F8E67E9F7B136&FORM=VIRE" className='text-[#4e31aa]'>y4th4rthh</a>
                 </div>
