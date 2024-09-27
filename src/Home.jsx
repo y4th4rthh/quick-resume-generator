@@ -1,5 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import errorcat from './errorcat.png';
+
+
 
 
 const Home = () => {
