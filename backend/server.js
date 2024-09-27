@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const mongoURI = 'mongodb://localhost:27017';
+const mongoURI = 'mongodb+srv://yatharthpatel014:yatharth@cluster0.iq2m5.mongodb.net/ResumeData?retryWrites=true&w=majority';
+
+
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -100,20 +102,20 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-app.post('/api/resume', async (req, res) => {
-    try {
-        const resumeData = req.body;
+// app.post('/api/resume', async (req, res) => {
+//     try {
+//         const resumeData = req.body;
 
-        const newResume = new Resume(resumeData);
+//         const newResume = new Resume(resumeData);
 
-        const savedResume = await newResume.save();
+//         const savedResume = await newResume.save();
 
-        res.json(savedResume);
-    } catch (err) {
-        console.error('Error saving resume:', err);
-        res.status(500).send('Error saving resume');
-    }
-});
+//         res.json(savedResume);
+//     } catch (err) {
+//         console.error('Error saving resume:', err);
+//         res.status(500).send('Error saving resume');
+//     }
+// });
 
 app.get('/api/resumeData', async (req, res) => {
     try {
@@ -148,6 +150,48 @@ app.get('/api/search', async (req, res) => {
         res.status(500).send('Error fetching resume data');
     }
 });
+
+app.put('/api/resume', async (req, res) => {
+    const { email, fullName, ...updateData } = req.body; // Destructure the request body
+
+    try {
+        const updatedResume = await Resume.findOneAndUpdate(
+            { email, fullName }, // Query to find the document
+            updateData, // Data to update
+            { new: true, runValidators: true } // Options: return the updated document and run validators
+        );
+
+        if (!updatedResume) {
+            return res.status(404).json({ message: 'No resume found for the given user' });
+        }
+
+        res.json(updatedResume); // Respond with the updated document
+    } catch (err) {
+        console.error('Error updating resume:', err);
+        res.status(500).send('Error updating resume');
+    }
+});
+
+
+
+
+app.delete('/api/delete', async (req, res) => {
+    const { email, fullName } = req.body;
+
+    try {
+        const deletedResume = await Resume.findOneAndDelete({ email, fullName });
+
+        if (!deletedResume) {
+            return res.status(404).json({ message: 'Resume not found' });
+        }
+
+        res.json({ message: 'Resume deleted successfully', deletedResume });
+    } catch (err) {
+        console.error('Error deleting resume:', err);
+        res.status(500).send('Error deleting resume');
+    }
+});
+
 
 
 
