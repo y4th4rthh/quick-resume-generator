@@ -155,22 +155,32 @@ app.put('/api/resume', async (req, res) => {
     const { email, fullName, ...updateData } = req.body; // Destructure the request body
 
     try {
+        // First, try to find and update the existing resume
         const updatedResume = await Resume.findOneAndUpdate(
             { email, fullName }, // Query to find the document
             updateData, // Data to update
             { new: true, runValidators: true } // Options: return the updated document and run validators
         );
 
+        // If no resume was found, create a new one
         if (!updatedResume) {
-            return res.status(404).json({ message: 'No resume found for the given user' });
+            const newResume = new Resume({
+                email,
+                fullName,
+                ...updateData // Include all other data
+            });
+
+            const savedResume = await newResume.save(); // Save the new resume
+            return res.status(201).json(savedResume); // Respond with the newly created resume
         }
 
         res.json(updatedResume); // Respond with the updated document
     } catch (err) {
-        console.error('Error updating resume:', err);
-        res.status(500).send('Error updating resume');
+        console.error('Error updating or creating resume:', err);
+        res.status(500).send('Error updating or creating resume');
     }
 });
+
 
 
 
