@@ -83,7 +83,7 @@ const Login = () => {
         <div className='font-rubik'>
             <ToastContainer />  
           <nav
-                className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 "
+                className="bg-white  w-full z-20 start-0 border-b border-gray-200 "
             >
                 <div
                     className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -284,7 +284,7 @@ const Login = () => {
 
                 </div>
             </div>
-            <div className="flex justify-center bg-white fixed bottom-0 w-full z-20 border-t border-gray-200 py-2" style={{ height: '70px' }}>
+            <div className="flex justify-center bg-white  w-full z-20 border-t border-gray-200 py-2" style={{ height: '70px' }}>
                 <div className="text-sm mt-4 text-black">
                     Made with ❤️ by <a href="https://www.bing.com/videos/riverview/relatedvideo?q=roll+rick+astley&mid=4E7B1C0F8E67E9F7B1364E7B1C0F8E67E9F7B136&FORM=VIRE" className='text-[#4e31aa]'>y4th4rthh</a>
                 </div>
