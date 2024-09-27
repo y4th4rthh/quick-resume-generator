@@ -248,7 +248,7 @@ const ResumeData = () => {
         <div className='font-rubik'>
             <ToastContainer />
             <nav
-                className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 "
+                className="bg-white   w-full z-20  start-0 border-b border-gray-200 "
             >
                 <div
                     className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -781,7 +781,33 @@ const ResumeData = () => {
 
                 </div>
             </div>
-            <div className="flex justify-center bg-white  fixed bottom-0 w-full z-20 border-t border-gray-200  py-2" style={{ height: '70px' }}>
+             <div className='mt-12'>
+                    <marquee style={{ whiteSpace: 'nowrap', animation: 'scroll 20s linear infinite' }}>
+                        <ol className="text-black font-semibold text-sm text-right p-0 m-0 list-none">
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> Click the "Generate Resume" button above to start creating your resume.
+                            </li>
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> Fill in all the required fields with accurate information.
+                            </li>
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> Review your information carefully before finalizing your resume.
+                            </li>
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> If you need to make changes, use the "Edit" button to update your details.
+                            </li>
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> Download your resume once you're satisfied with the information provided.
+                            </li>
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> For assistance or technical support, please contact our support team.
+                            </li>
+                        </ol>
+
+                    </marquee>
+                </div>
+            
+            <div className="mt -12 flex justify-center bg-white w-full z-20 border-t border-gray-200  py-2" style={{ height: '70px' }}>
                 <div className="text-sm mt-4 text-black">
                     Made with ❤️ by <a href="https://www.bing.com/videos/riverview/relatedvideo?q=roll+rick+astley&mid=4E7B1C0F8E67E9F7B1364E7B1C0F8E67E9F7B136&FORM=VIRE" className='text-[#4e31aa]'>y4th4rthh</a>
                 </div>
