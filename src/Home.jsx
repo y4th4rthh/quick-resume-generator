@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import errorcat from './errorcat.gif';
+import MobileViewHome from './MobileViewHome';
 
 
 
@@ -20,23 +20,19 @@ const Home = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); 
+            setIsMobile(window.innerWidth <= 768);
         };
-        handleResize(); 
-        window.addEventListener('resize', handleResize); 
+        handleResize();
+        window.addEventListener('resize', handleResize);
 
-        return () => window.removeEventListener('resize', handleResize); 
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     if (isMobile) {
         return (
-            <div className='bg-white flex justify-center items-center h-screen'>
-            <div className='flex-col gap-6 justify-center items-center '>
-                <img src={errorcat} alt='error' className='w-fit' />
-                <div className='text-sm mt-2 text-black font-semibold sm:text-xl'>Sorry :(, the website is currently unavailable for mobile devices. We are working on it!</div>
-                <div className='bg-transparent cursor-pointer  rounded-md py-2 px-4 w-half text-black underline float-right text-sm sm:text-lg' onClick={() => window.location.href = '/help'}>Contact Us</div>
+            <div>
+                <MobileViewHome/>
             </div>
-        </div>
         );
     }
 
@@ -73,7 +69,7 @@ const Home = () => {
                         >
                             Login
                         </button>
-                        
+
                     </div>
                     <div
                         className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 "
@@ -291,7 +287,7 @@ const Home = () => {
                         Get Started
                     </button>
                 </section>
-                <hr className='bg-blue-100'/>
+                <hr className='bg-blue-100' />
                 <footer className="bg-[#4e31aa] text-white text-center py-8">
                     <div className="text-sm">
                         Made with ❤️ by <a href="https://youtu.be/dQw4w9WgXcQ?si=WLP_oyA5nwSQ2dbF" className='text-white'>y4th4rthh</a>
