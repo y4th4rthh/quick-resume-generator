@@ -362,7 +362,7 @@ const ResumeData = () => {
                     {/* , {usrData.fullName} */}
                     <div className="sub-head text-sm flex flex-wrap">
                         <div style={{ maxWidth: '20rem', margin: '0 auto' }}>
-                            <div style={{ marginBottom: '1.2rem' }}>
+                            <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="fname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Full Name <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -379,7 +379,7 @@ const ResumeData = () => {
                                 />
                             </div>
 
-                            <div style={{ marginBottom: '1.2rem' }}>
+                            <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Department/Branch Name <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -396,7 +396,7 @@ const ResumeData = () => {
                                 />
                             </div>
 
-                            <div style={{ marginBottom: '1.2rem' }}>
+                            <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Phone Number  <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -414,7 +414,7 @@ const ResumeData = () => {
 
                             </div>
 
-                            <div style={{ marginBottom: '1.2rem' }}>
+                            <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Email Address  <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -432,7 +432,7 @@ const ResumeData = () => {
 
                             </div>
 
-                            <div style={{ marginBottom: '1.2rem' }}>
+                            <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Github Link (if any)  <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -450,7 +450,7 @@ const ResumeData = () => {
 
                             </div>
 
-                            <div style={{ marginBottom: '1.2rem' }}>
+                            <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Summary/About Yourself  <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -557,7 +557,7 @@ const ResumeData = () => {
 
 
 
-                            <div style={{ marginBottom: '2.2rem' }}>
+                            <div style={{ marginBottom: '1.2rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Skill/Technologies Known <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -601,7 +601,7 @@ const ResumeData = () => {
 
                             
 
-                            <div style={{ marginBottom: '2.2rem' }}>
+                            <div style={{ marginBottom: '1.2rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Project 1 <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -643,7 +643,7 @@ const ResumeData = () => {
 
                             </div>
 
-                            <div style={{ marginBottom: '2.2rem' }}>
+                            <div style={{ marginBottom: '1.2rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Project 2 <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -685,7 +685,7 @@ const ResumeData = () => {
 
                             </div>
 
-                            <div style={{ marginBottom: '2.2rem' }}>
+                            <div style={{ marginBottom: '1.2rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Project 3  <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
@@ -727,7 +727,7 @@ const ResumeData = () => {
 
                             </div>
 
-                            <div style={{ marginBottom: '2.2rem' }}>
+                            <div style={{ marginBottom: '1rem' }}>
                                 <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Choose color for Template <span style={{ color: '#ef4444' }}>*</span>
                                 </label>
