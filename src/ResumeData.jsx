@@ -93,11 +93,11 @@ const ResumeData = () => {
                 break;
             case 'summary':
                 if (value.length > 300) {
-                    setSummaryError('');
+                    
                 }
                 else if(value.length<200)
                 {
-                    setSummaryError('');
+                   
                 }
                  else {
                     setSummaryError('');
@@ -162,21 +162,21 @@ const ResumeData = () => {
                 break;
             case 'projectdes1':
                 if (value.length > 300) {
-                    setProDes1Error('');
+                    
                 } else {
                     setProDes1Error('');
                 }
                 break;
             case 'projectdes2':
                 if (value.length > 300) {
-                    setProDes2Error('');
+                    
                 } else {
                     setProDes2Error('');
                 }
                 break;
             case 'projectdes3':
                 if (value.length > 300) {
-                    setProDes3Error('');
+                  
                 } else {
                     setProDes3Error('');
                 }
