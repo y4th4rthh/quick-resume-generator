@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useEffect, useState } from 'react';
+import MobileViewHome from './MobileViewHome';
 
 const AboutUs = () => {
     const navigate = useNavigate();
@@ -11,6 +12,26 @@ const AboutUs = () => {
     const handleNavigateToResumeData = () => {
         navigate('/');
     };
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (isMobile) {
+        return (
+            <div>
+                <MobileViewHome/>
+            </div>
+        );
+    }
 
     return (
         <div className='font-rubik'>
