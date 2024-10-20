@@ -4,6 +4,8 @@ import Header from './Header';
 import { ToastContainer,toast,Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useLocation } from 'react-router-dom';
+import MobileViewHome from './MobileViewHome';
+
 const ResumeData = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -24,6 +26,26 @@ const ResumeData = () => {
             return 'Good Evening';
         }
     };
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (isMobile) {
+        return (
+            <div>
+                <MobileViewHome/>
+            </div>
+        );
+    }
 
     const [formData, setFormData] = useState({
         fullName: '',

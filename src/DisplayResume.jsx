@@ -4,11 +4,31 @@ import axios from 'axios';
 import htmlpdf from 'html2pdf.js';
 import { useLocation } from 'react-router-dom';
 import errorcat from './errorcat.gif';
+import MobileViewHome from './MobileViewHome';
 
 const DisplayResume = () => {
     const [resumeData, setResumeData] = useState(null);
     const location = useLocation();
     const { usrData } = location.state;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (isMobile) {
+        return (
+            <div>
+                <MobileViewHome/>
+            </div>
+        );
+    }
 
     useEffect(() => {
         const fetchData = async () => {

@@ -3,6 +3,10 @@ import axios from 'axios';
 import { ToastContainer,toast,Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import MobileViewHome from './MobileViewHome';
+
 const ResumeData = () => {
     const navigate = useNavigate();
    
@@ -16,6 +20,25 @@ const ResumeData = () => {
     const [emailError, setEmailError] = useState('');
     const [passError, setPassError] = useState('');
     const [conpassError, setConpassError] = useState('');
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (isMobile) {
+        return (
+            <div>
+                <MobileViewHome/>
+            </div>
+        );
+    }
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
