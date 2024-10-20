@@ -11,6 +11,7 @@ import ContactUs from "./ContactUs";
 import ContactUss from "./ContactUss";
 import Help from "./Help";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
