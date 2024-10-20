@@ -19,7 +19,7 @@ function App() {
   return (
     <>
      <Router >
-       <div className="max-w-screen">
+       <div className="w-screen">
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route path="/login" element={<Login/>} />
