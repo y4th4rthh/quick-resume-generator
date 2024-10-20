@@ -86,6 +86,40 @@ const Help = () => {
 
         <div className='font-rubik'>
             <ToastContainer/>
+            <nav
+                className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 "
+            >
+                <div
+                    className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+                >
+                    <a
+                        onClick={() => navigate('/')}
+                        className="flex items-center space-x-3 rtl:space-x-reverse"
+                    >
+                        {/* <img
+                            src="https://img.icons8.com/?size=100&id=VLMGPxgLneP3&format=png&color=000000"
+                            className="h-8"
+                            alt="Flowbite Logo"
+                        /> */}
+                        <span
+                            className="self-center text-2xl font-semibold whitespace-nowrap text-[#4e31aa] "
+                        >
+                            QuickResume
+                        </span>
+                    </a>
+                    <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button
+                            type="button"
+                            className="text-white bg-[#4e31aa] hover:bg-[#372379] focus:ring-4 focus:outline-none focus:ring-[#4e31aa] font-medium rounded-lg text-sm px-4 py-2 text-center "
+                            onClick={() => window.location.href = '/'}
+                        >
+                            Home
+                        </button>
+
+                    </div>
+
+                </div>
+            </nav>
             <div className="relative flex items-top justify-center min-h-screen bg-white  sm:items-center  sm:mt-0 sm:pt-0">
                 <div className="max-w-6xl mx-auto my-auto sm:px-6 lg:px-8">
                     <div className="mt-8 overflow-hidden">
