@@ -10,6 +10,7 @@ import AboutUs from './AboutUs';
 import ContactUs from "./ContactUs";
 import ContactUss from "./ContactUss";
 import Help from "./Help";
+import MobileViewHome from "./MobileViewHome";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
