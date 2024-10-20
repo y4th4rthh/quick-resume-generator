@@ -16,7 +16,8 @@ import './App.css';
 function App() {
   return (
     <>
-     <Router>
+     <Router >
+       <div className="w-screen">
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route path="/login" element={<Login/>} />
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/contactus" element={<ContactUs/>} />
                 <Route path="/contactuss" element={<ContactUss/>} />
             </Routes>
+         </div>
         </Router>
     </>
   );
