@@ -38,7 +38,7 @@ const Home = () => {
 
     return (
 
-        <div className='w-full font-rubik'>
+        <div className='w-screen font-rubik'>
 
             <nav
                 className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 "
@@ -151,7 +151,7 @@ const Home = () => {
 
                 </div>
             </nav>
-            <div className="w-full bg-white sm:mt-8 mt-28">
+            <div className="w-screen bg-white sm:mt-8 mt-28">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
                     <h1 className="text-4xl font-bold">Create Your Professional Resume in Minutes</h1>
                     <p className="mt-4 text-lg">Get hired faster with our easy-to-use resume builder.</p>
