@@ -12,6 +12,8 @@ import ContactUss from "./ContactUss";
 import Help from "./Help";
 import MobileViewHome from "./MobileViewHome";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
