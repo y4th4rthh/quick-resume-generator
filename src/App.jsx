@@ -29,9 +29,7 @@ function App() {
 
     if (isMobile) {
         return (
-            <div>
                 <MobileViewHome/>
-            </div>
         );
     }
 
