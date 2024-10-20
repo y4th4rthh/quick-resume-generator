@@ -38,7 +38,7 @@ const Home = () => {
 
     return (
 
-        <div className='font-rubik'>
+        <div className='w-full font-rubik'>
 
             <nav
                 className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 "
