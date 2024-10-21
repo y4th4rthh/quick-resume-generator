@@ -272,7 +272,7 @@ const Login = () => {
                                 </div>
                             </div>
 
-                            <div className='mt-2 mx-4'>
+                            <div className='mt-2 mx-3'>
                                 <button
                                   className='bg-[#4e31aa]'
                                     type="submit"
