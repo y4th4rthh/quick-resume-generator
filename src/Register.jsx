@@ -18,6 +18,7 @@ const ResumeData = () => {
     const [emailError, setEmailError] = useState('');
     const [passError, setPassError] = useState('');
     const [conpassError, setConpassError] = useState('');
+    const [loading, setLoading] = useState(false);
     
 
     const handleInputChange = (e) => {
@@ -71,6 +72,7 @@ const ResumeData = () => {
         try {
             const response = await axios.post('https://quick-resume-backend.onrender.com/api/register', formData);
             console.log('Data sent to server:', response.data);
+            setLoading(false);
             navigate('/login', { state: { loginData: formData } });
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -296,7 +298,7 @@ const ResumeData = () => {
                                     }}
                                     style={{ width: '100%', padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
-                                    Submit
+                                    {loading ? 'Registering...' : 'Register'} 
                                 </button>
                             </div>
 

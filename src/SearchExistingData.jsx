@@ -13,6 +13,7 @@ const SearchExistingData = () => {
     });
     
     const [emailError, setEmailError] = useState('');
+    const [loading, setLoading] = useState(false);
    
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -49,6 +50,7 @@ const SearchExistingData = () => {
         }
 
         try {
+            setLoading(false);
             navigate('/displayexistingresume', { state: { usrData: formData } });
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -240,7 +242,7 @@ const SearchExistingData = () => {
                                     }}
                                     style={{ width: '100%', padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
-                                    Submit
+                                  {loading ? 'Searching...' : 'Search Resume'}
                                 </button>
                             </div>
 

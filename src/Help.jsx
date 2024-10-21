@@ -21,6 +21,7 @@ const Help = () => {
     const [emailError, setEmailError] = useState('');
     const [fullNameError, setFullNameError] = useState('');
     const [messageError, setMessageError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -71,7 +72,9 @@ const Help = () => {
             toast("Form submitted successfully", {
                 position: "bottom-right",
                 transition: Slide,
+            
             });
+            setLoading(false);
         }
     };
 
@@ -224,7 +227,7 @@ const Help = () => {
                                     className="md:w-32 bg-[#4e31aa] hover:bg-[#372379] text-white font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300"
                                     onClick={notify}
                                 >
-                                    Submit
+                                   {loading ? 'Sending...' : 'Send'}
                                 </button>
                                 <p className="leading-relaxed text-xl text-gray-900 mt-8">
                                     We value your privacy and use VeilMail.io to{" "}

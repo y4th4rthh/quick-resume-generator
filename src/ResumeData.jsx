@@ -74,6 +74,7 @@ const ResumeData = () => {
     const [prodes1Error, setProDes1Error] = useState('');
     const [prodes2Error, setProDes2Error] = useState('');
     const [prodes3Error, setProDes3Error] = useState('');
+    const [loading, setLoading] = useState(false);
     
 
     const handleInputChange = (e) => {
@@ -227,6 +228,7 @@ const ResumeData = () => {
                             transition: Slide,
                         });
                         throw new Error('Failed to save resume data');
+                        setLoading(false);
                     }
             
                     const data = await response.json();
@@ -769,7 +771,7 @@ const ResumeData = () => {
                                     onClick={handleSubmit}
                                     style={{ width: '100%', padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
-                                    Submit
+                                    {loading ? 'Generating...' : 'Generate Resume'}
                                 </button>
                             </div>
 

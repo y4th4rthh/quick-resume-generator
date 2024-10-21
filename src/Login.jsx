@@ -18,6 +18,7 @@ const Login = () => {
     const [emailError, setEmailError] = useState('');
     const [passError, setPassError] = useState('');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
     
 
     const handleInputChange = (e) => {
@@ -57,6 +58,7 @@ const Login = () => {
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message);
+                setLoading(false);
             }
 
             const userData = await response.json();
@@ -277,7 +279,7 @@ const Login = () => {
                                     onClick={handleSubmit}
                                     style={{ width: '100%', padding: '0.75rem', color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
-                                    Submit
+                                    {loading ? 'Logging in...' : 'Login'}
                                 </button>
                             </div>
 
