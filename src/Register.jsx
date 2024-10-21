@@ -288,7 +288,7 @@ const ResumeData = () => {
                                 </div>
                             </div>
 
-                            <div className='mt-2 mx-8'>
+                            <div className='mt-2 mx-6'>
                                 <button
                                    className='bg-[#4e31aa]'
                                     type="submit"

@@ -232,7 +232,7 @@ const SearchExistingData = () => {
                                 </div>
                             </div>
 
-                            <div className='mt-4 mx-4' >
+                            <div className='mt-4 mx-8' >
                                 <button
                                  className='bg-[#4e31aa]'
                                     type="submit"
