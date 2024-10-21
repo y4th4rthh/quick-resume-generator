@@ -432,7 +432,7 @@ const DisplayResume = () => {
                                     <button className="bg-red-500 hover:bg-red-600 rounded-md py-2 px-4 w-half text-white" onClick={() => setIsManageEditVisible(!isManageEditVisible)}>Close</button>
                                 </div>
 
-                                <div className='mb-5 text-2xl m-auto text-gray-600' style={{ marginLeft: '7%' }}>{greeting}</div>
+                                <div className='mb-5 text-2xl m-auto text-gray-600' style={{ marginLeft: '7%' }}></div>
                                 {/* , {usrData.fullName} */}
                                 <div className="sub-head text-sm flex flex-wrap">
                                     <div style={{ maxWidth: '20rem', margin: '0 auto' }}>
