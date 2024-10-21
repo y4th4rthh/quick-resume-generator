@@ -232,7 +232,7 @@ const SearchExistingData = () => {
                                 </div>
                             </div>
 
-                            <div className='mt-4 mx-4' >
+                            <div className='mt-4 flex justify-center' >
                                 <button
                                  className='bg-[#4e31aa]'
                                     type="submit"
@@ -240,7 +240,7 @@ const SearchExistingData = () => {
                                         handleSubmit();
 
                                     }}
-                                    style={{ width: '100%', padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
+                                    style={{ width: '100%',maxWidth: '20rem', padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
                                   {loading ? 'Searching...' : 'Search Resume'}
                                 </button>
