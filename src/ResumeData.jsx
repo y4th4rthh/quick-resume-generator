@@ -198,7 +198,10 @@ const ResumeData = () => {
 
     useEffect(() => {
         console.log('Updated resumeData:', resumeData);
-       setFormData(resumeData);
+       if(!resumeData)
+       {
+        setFormData(resumeData);
+       }
     }, [resumeData]);
 
     const handleSubmit = async (e) => {
