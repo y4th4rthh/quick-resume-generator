@@ -8,7 +8,16 @@ import MobileViewHome from './MobileViewHome';
 
 const Home = () => {
     const navigate = useNavigate();
-    
+
+    const handleLogin = () => {
+        navigate('/login');
+    }
+
+    const handleNavigateToAboutUs = () => {
+        navigate('/aboutus');
+    };
+
+   
 
     return (
 
