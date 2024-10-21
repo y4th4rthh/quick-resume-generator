@@ -465,7 +465,7 @@ const DisplayResume = () => {
 
                 {isManageEditVisible && (
                     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                        <div className=" font-rubik flex justify-center mb-11" style={{ width: '100%', minHeight: '100vh', backgroundColor: '#f3f4f6', paddingTop: '3rem', marginTop: '4rem' }}>
+                        <div className=" font-rubik flex justify-center mb-11 overflow-scroll" style={{ width: '100%', minHeight: '100vh', backgroundColor: '#f3f4f6', paddingTop: '3rem', marginTop: '4rem' }}>
 
                             <div className="flex-row " style={{ position: 'relative', padding: '4rem', width: '1000px', minWidth: '20rem', marginBottom: '3rem', backgroundColor: '#ffffff', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
 
