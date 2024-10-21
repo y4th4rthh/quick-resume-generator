@@ -198,7 +198,7 @@ const ResumeData = () => {
 
     useEffect(() => {
         console.log('Updated resumeData:', editData);
-       if(!editData)
+       if(editData.length!==0)
        {
         setFormData(editData);
         console.log(formData.email);
