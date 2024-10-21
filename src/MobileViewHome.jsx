@@ -46,7 +46,7 @@ const AboutUs = () => {
             <div className="bg-white sm:mt-11 mt-4">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
                     <h1 className="text-4xl font-bold">Sorry 🙁</h1>
-                    <p className="mt-4 ">The website is currently unavailable for resume preview on mobile devices. We are working on it! Please try downloading the resume on a desktop or laptop.</p>
+                    <p className="mt-4 ">The website is currently unavailable for resume preview on mobile devices. We are working on it! Don't worry if you have already created the resume, you can access it on PC devices. Please try downloading the resume through a desktop or laptop.</p>
                 </section>
 
                 <section className="text-center py-12 px-4">
