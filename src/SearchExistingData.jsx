@@ -202,7 +202,7 @@ const SearchExistingData = () => {
                                 </div>
 
 
-                                <div style={{ marginBottom: '1.2rem' }}>
+                                <div>
                                     <label htmlFor="lname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                         Email Address  <span style={{ color: '#ef4444' }}>*</span>
                                     </label>
@@ -213,7 +213,7 @@ const SearchExistingData = () => {
                                         className='bg-gray-200 text-black'
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        style={{ width: '100%', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
+                                        style={{ width: '100%', marginLeft:'10rem',marginRight:'10rem', padding: '0.75rem', border: '1px solid #d1d5db', borderRadius: '0.375rem', boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)', fontSize: '0.875rem', outline: 'none', transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out' }}
                                         placeholder="Enter Your Email Address"
                                         required
                                     />
@@ -232,7 +232,7 @@ const SearchExistingData = () => {
                                 </div>
                             </div>
 
-                            <div className='mt-4'>
+                            <div className='mt-4' style={{ maxWidth: '20rem'}}>
                                 <button
                                  className='bg-[#4e31aa]'
                                     type="submit"
