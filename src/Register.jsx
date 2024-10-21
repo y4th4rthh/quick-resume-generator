@@ -154,7 +154,7 @@ const ResumeData = () => {
                         id="navbar-sticky"
                     >
                         <ul
-                            className="flex flex-row p-2 text-sm md:p-0 mt-4 justify-between font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
+                            className="flex flex-row p-1 text-sm md:p-0 mt-4 justify-between font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
                         >
                             <li>
                                 <a
