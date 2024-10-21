@@ -13,26 +13,7 @@ const SearchExistingData = () => {
     });
     
     const [emailError, setEmailError] = useState('');
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    if (isMobile) {
-        return (
-            <div>
-                <MobileViewHome/>
-            </div>
-        );
-    }
-
+   
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({

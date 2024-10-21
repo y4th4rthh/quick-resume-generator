@@ -4,7 +4,6 @@ import { ToastContainer,toast,Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import MobileViewHome from './MobileViewHome';
 
 
 
@@ -24,25 +23,7 @@ const ContactUss = () => {
     const [emailError, setEmailError] = useState('');
     const [fullNameError, setFullNameError] = useState('');
     const [messageError, setMessageError] = useState('');
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    if (isMobile) {
-        return (
-            <div>
-                <MobileViewHome/>
-            </div>
-        );
-    }
+    
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
