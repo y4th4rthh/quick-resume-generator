@@ -9,7 +9,7 @@ import MobileViewHome from './MobileViewHome';
 const ResumeData = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { resumeData } = location.state;
+    const { editData } = location.state;
     // const { usrData } = location.state;
     const [greeting, setGreeting] = useState('');
 
@@ -197,12 +197,12 @@ const ResumeData = () => {
     };
 
     useEffect(() => {
-        console.log('Updated resumeData:', resumeData);
-       if(!resumeData)
+        console.log('Updated resumeData:', editData);
+       if(!editData)
        {
-        setFormData(resumeData);
+        setFormData(editData);
        }
-    }, [resumeData]);
+    }, [editData]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

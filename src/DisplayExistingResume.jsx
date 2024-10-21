@@ -108,7 +108,7 @@ const DisplayExistingResume = () => {
 
 
     const handleEditData = () => {
-        navigate('/resume', { state: { formData : resumeData } });
+        navigate('/resume', { state: { editData : resumeData } });
     };
 
     const handleDeleteData = async () => {
