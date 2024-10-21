@@ -9,12 +9,16 @@ import MobileViewHome from './MobileViewHome';
 const ResumeData = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { resumeData } = location.state;
     // const { usrData } = location.state;
     const [greeting, setGreeting] = useState('');
 
     useEffect(() => {
         setGreeting(getGreeting());
+
     }, []);
+
+    
 
     const getGreeting = () => {
         const hour = new Date().getHours();
@@ -78,6 +82,8 @@ const ResumeData = () => {
             ...formData,
             [name]: value
         });
+
+
 
         switch (name) {
             case 'email':
@@ -189,6 +195,11 @@ const ResumeData = () => {
                 break;
         }
     };
+
+    useEffect(() => {
+        console.log('Updated resumeData:', resumeData);
+       setFormData(resumeData);
+    }, [resumeData]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

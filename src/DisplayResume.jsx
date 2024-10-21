@@ -5,12 +5,14 @@ import htmlpdf from 'html2pdf.js';
 import { useLocation } from 'react-router-dom';
 import errorcat from './errorcat.gif';
 import MobileViewHome from './MobileViewHome';
+import { useNavigate } from 'react-router-dom';
 
 const DisplayResume = () => {
     const [resumeData, setResumeData] = useState(null);
     const location = useLocation();
     const { usrData } = location.state;
     const [isMobile, setIsMobile] = useState(false);
+    const navigate = useNavigate();
     
    
     useEffect(() => {
@@ -99,7 +101,7 @@ const DisplayResume = () => {
     }
 
     const handleEditData = () => {
-        window.location.href = '/resume';
+        navigate('/resume', { state: { formData : resumeData } });
     };
 
     const handleDeleteData = async () => {
