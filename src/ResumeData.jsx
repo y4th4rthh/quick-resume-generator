@@ -201,6 +201,7 @@ const ResumeData = () => {
        if(!editData)
        {
         setFormData(editData);
+        console.log(formData.email);
        }
     }, [editData]);
 
