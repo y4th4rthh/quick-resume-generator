@@ -288,7 +288,7 @@ const ResumeData = () => {
                                 </div>
                             </div>
 
-                            <div className='mt-2'>
+                            <div className='mt-2 mx-4'>
                                 <button
                                    className='bg-[#4e31aa]'
                                     type="submit"
@@ -296,7 +296,7 @@ const ResumeData = () => {
                                         handleSubmit();
 
                                     }}
-                                    style={{ width: '100%',  marginLeft:'10rem',marginRight:'10rem', padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
+                                    style={{ width: '100%',  padding: '0.75rem',  color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
                                     {loading ? 'Registering...' : 'Register'} 
                                 </button>
