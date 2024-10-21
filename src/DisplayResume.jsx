@@ -12,6 +12,48 @@ const DisplayResume = () => {
     const { usrData } = location.state;
     const [isMobile, setIsMobile] = useState(false);
     const [isManageEditVisible, setIsManageEditVisible] = useState(false);
+    const [formData, setFormData] = useState({
+        fullName: '',
+        dept: '',
+        phone: '',
+        email: '',
+        gitlink: '',
+        summary: '',
+        graduationInstitute: '',
+        graduationQualification: '',
+        graduationYear: '',
+        twelfthInstitute: '',
+        twelfthQualification: '',
+        twelfthYear: '',
+        skillsFE: '',
+        skillsBE: '',
+        skillsOther: '',
+        lang1: '',
+        lang2: '',
+        lang3: '',
+        project1: '',
+        project2: '',
+        project3: '',
+        projectdes1: '',
+        projectdes2: '',
+        projectdes3: '',
+        choosecolor: '',
+    });
+
+    const [emailError, setEmailError] = useState('');
+    const [phoneError, setPhoneError] = useState('');
+    const [summaryError, setSummaryError] = useState('');
+    const [graduationYearError, setGraduationYearError] = useState('');
+    const [twelfthYearError, setTwelfthYearError] = useState('');
+    const [skillsFEError, setSkillsFEError] = useState('');
+    const [skillsBEError, setSkillsBEError] = useState('');
+    const [skillsOtherError, setSkillsOtherError] = useState('');
+    const [lang1Error, setLang1Error] = useState('');
+    const [lang2Error, setLang2Error] = useState('');
+    const [lang3Error, setLang3Error] = useState('');
+    const [prodes1Error, setProDes1Error] = useState('');
+    const [prodes2Error, setProDes2Error] = useState('');
+    const [prodes3Error, setProDes3Error] = useState('');
 
     const handleEditInputChange = (e) => {
         const { name, value } = e.target;
