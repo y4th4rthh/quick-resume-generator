@@ -134,7 +134,7 @@ const DisplayExistingResume = () => {
                 <div className='container'>
                 </div>
                 <div className='m-12'>
-                    <p className="text-black sm:text-5xl text-center font-bold">Resume Auto Generator</p>
+                    <p className="text-black sm:text-5xl text-2xl text-center font-bold">Resume Auto Generator</p>
 
                 </div>
                 <div className=' rounded-lg flex justify-center ml-1.5 mr-1.5' >
