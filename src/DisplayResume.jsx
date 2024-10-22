@@ -68,11 +68,8 @@ const DisplayResume = () => {
     const handleDownloadPDF = () => {
         const element = document.getElementById('tableContent');
 
-        // const elementHeight = element.offsetHeight;
-        // const elementWidth = element.offsetWidth;
-
-        const elementHeight = 290;
-        const elementWidth = 250;
+        const elementHeight = element.offsetHeight;
+        const elementWidth = element.offsetWidth;
 
         const pageHeightInInches = (elementHeight + 1) / 96;
         const pageWidthInInches = (elementWidth + 1) / 96;
