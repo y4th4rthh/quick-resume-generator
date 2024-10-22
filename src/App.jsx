@@ -19,7 +19,7 @@ function App() {
   return (
     <>
      <Router >
-       <div className="w-screen">
+       <div className="w-screen" style={{overflowX:'scroll',  msOverflowStyle: 'none', scrollbarWidth: 'none'}}>
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route path="/login" element={<Login/>} />
