@@ -141,7 +141,7 @@ const DisplayExistingResume = () => {
 
                 </div>
                 <div className=' rounded-lg flex justify-center' style={{ marginLeft: '20%', marginRight: '20%' }}>
-                    <div className='container-fluid bg-gray-100' id='tableContent' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid' }}>
+                    <div className='container-fluid overflow-scroll bg-gray-100' id='tableContent' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid' }}>
 
                         <table id="mytable" className='bg-white' style={{ borderCollapse: 'collapse', width: '250mm', height: '290mm', border: '0px solid gray', pageBreakInside: 'avoid' }}>
 
