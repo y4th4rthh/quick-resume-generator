@@ -122,15 +122,15 @@ const DisplayResume = () => {
     return (
         <div className='bg-white font-rubik'>
             <Headerr />
-            <div className='flex-row justify-center  font-rubik mb-4 bg-white' style={{ paddingTop: '7rem' }}>
+            <div className='flex-row justify-center w-screen font-rubik mb-4 bg-white' style={{ paddingTop: '7rem' }}>
                 <div className='container'>
                 </div>
                 <div className='m-12'>
-                    <p className="text-black text-5xl text-center font-bold">Resume Auto Generator</p>
+                    <p className="text-black sm:text-5xl text-center font-bold">Resume Auto Generator</p>
 
                 </div>
-                <div className='rounded-lg flex justify-center' style={{ marginLeft: '20%', marginRight: '20%' }}>
-                    <div className='container-fluid bg-gray-100' id='tableContent' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid' }}>
+                <div className='rounded-lg flex justify-center ml-1.5 mr-1.5'>
+                    <div className='container-fluid sm:flex sm:justify-center bg-gray-100' id='tableContent' style={{  paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid',overflow:'scroll' }}>
 
                         <table id="mytable" className='bg-white' style={{ borderCollapse: 'collapse', width: '250mm', height: '290mm', border: '0px solid gray', pageBreakInside: 'avoid' }}>
 
