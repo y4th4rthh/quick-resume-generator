@@ -12,26 +12,26 @@ const DisplayExistingResume = () => {
     const [resumeData, setResumeData] = useState(null);
     const location = useLocation();
     const { usrData } = location.state;
-    const [isMobile, setIsMobile] = useState(false);
     const navigate = useNavigate();
+    // const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setIsMobile(window.innerWidth <= 768);
+    //     };
+    //     handleResize();
+    //     window.addEventListener('resize', handleResize);
 
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    //     return () => window.removeEventListener('resize', handleResize);
+    // }, []);
 
-    if (isMobile) {
-        return (
-            <div>
-                <MobileViewHome/>
-            </div>
-        );
-    }
+    // if (isMobile) {
+    //     return (
+    //         <div>
+    //             <MobileViewHome/>
+    //         </div>
+    //     );
+    // }
 
 
     useEffect(() => {
@@ -74,8 +74,11 @@ const DisplayExistingResume = () => {
     const handleDownloadPDF = () => {
         const element = document.getElementById('tableContent');
 
-        const elementHeight = element.offsetHeight;
-        const elementWidth = element.offsetWidth;
+        // const elementHeight = element.offsetHeight;
+        // const elementWidth = element.offsetWidth;
+
+        const elementHeight = 290;
+        const elementWidth = 250;
 
         const pageHeightInInches = (elementHeight + 1) / 96;
         const pageWidthInInches = (elementWidth + 1) / 96;

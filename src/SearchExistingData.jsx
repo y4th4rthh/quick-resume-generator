@@ -100,7 +100,7 @@ const SearchExistingData = () => {
                         id="navbar-sticky"
                     >
                         <ul
-                            className="flex flex-col p-1 text-sm md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
+                            className="flex flex-col p-4 text-sm md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
                         >
                             <li>
                                 <a
@@ -138,12 +138,12 @@ const SearchExistingData = () => {
                         id="navbar-sticky"
                     >
                         <ul
-                            className="flex flex-row justify-between p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
+                            className="flex flex-row justify-between p-1 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
                         >
                             <li>
                                 <a
                                     onClick={handleNavigateToResumeData}
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0  "
+                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-white md:hover:text-[#4e31aa] md:p-0  "
                                 >
                                     Home
                                 </a>
@@ -152,7 +152,7 @@ const SearchExistingData = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 text-white md:hover:text-[#4e31aa] hover:text-[#4e31aa] bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] md:p-0 "
+                                    className="block py-2 px-3 text-white md:hover:text-[#4e31aa] hover:text-[#4e31aa] bg-[#4e31aa] rounded md:bg-transparent hover:text-[#4e31aa] md:text-[#4e31aa] md:p-0 "
                                     aria-current="page"
                                 >
                                     Get Existing Datas
@@ -162,7 +162,7 @@ const SearchExistingData = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0"
+                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0"
                                     onClick={() => navigate('/contactuss')}
                                 >
                                     Contact

@@ -169,7 +169,7 @@ const ContactUss = () => {
                             <li>
                                 <a
                                     onClick={() => navigate('/resume')}
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0"
+                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0"
                                 >
                                     Home
                                 </a>
@@ -177,7 +177,7 @@ const ContactUss = () => {
 
                             <li>
                                 <a
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0"
+                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0"
                                     onClick={() => navigate('/search')}
                                 >
                                     Get Existing Datas
@@ -187,7 +187,7 @@ const ContactUss = () => {
                             <li>
                                 <a
 
-                                    className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa]  md:p-0 "
+                                    className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent hover:text-white md:text-[#4e31aa]  md:p-0 "
                                     aria-current="page"
                                 >
                                     Contact

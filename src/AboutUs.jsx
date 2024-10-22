@@ -94,7 +94,7 @@ const AboutUs = () => {
                                 <a
                                     href="#"
                                     onClick={handleNavigateToResumeData}
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0  "
+                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0  "
                                 >
                                     Home
                                 </a>
@@ -103,7 +103,7 @@ const AboutUs = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent  md:text-[#4e31aa] md:p-0 "
+                                    className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent hover:text-white  md:text-[#4e31aa] md:p-0 "
                                     aria-current="page"
                                 >
                                     About Us
@@ -113,7 +113,7 @@ const AboutUs = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0"
+                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0"
                                     onClick={() => navigate('/contactus')}
                                 >
                                     Contact

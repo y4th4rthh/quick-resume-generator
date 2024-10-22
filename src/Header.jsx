@@ -86,7 +86,7 @@ const Header = () => {
                         </li>
                         <li>
                             <a
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0"
                                 onClick={() => navigate('/search')}
                             >
                                 Get Existing Datas
@@ -96,7 +96,7 @@ const Header = () => {
                         <li>
                             <a
                                 onClick={() => navigate('/contactuss')}
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4e31aa] md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0"
                             >
                                 Contact
                             </a>
