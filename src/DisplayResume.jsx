@@ -130,7 +130,7 @@ const DisplayResume = () => {
 
                 </div>
                 <div className='rounded-lg flex justify-center ml-1.5 mr-1.5'>
-                    <div className='container-fluid sm:flex sm:justify-center bg-gray-100' id='tableContent' style={{  paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid',overflow:'scroll' }}>
+                    <div className='container-fluid sm:flex sm:justify-center bg-gray-100' id='tableContent' style={{  paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px', pageBreakInside: 'avoid',overflowX:'scroll',  msOverflowStyle: 'none', scrollbarWidth: 'none'  }}>
 
                         <table id="mytable" className='bg-white' style={{ borderCollapse: 'collapse', width: '250mm', height: '290mm', border: '0px solid gray', pageBreakInside: 'avoid' }}>
 
@@ -231,7 +231,7 @@ const DisplayResume = () => {
                     <button
 
                         type="button"
-                        className="bg-[#4e31aa] hover:bg-[#372379] rounded-md py-2 px-4 w-half text-white "
+                        className="bg-[#4e31aa] hover:bg-[#372379] hidden sm:block rounded-md py-2 px-4 w-half text-white "
                         onClick={handleDownloadPDF}
                     >
                         Download Resume
