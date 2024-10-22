@@ -13,9 +13,5 @@ export default {
   },
   variants: {},
   plugins: [],
-  corePlugins: {
-    // Optionally disable built-in scrollbar utilities if you have any custom styling
-    scrollbar: false,
-  },
 }
 
