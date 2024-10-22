@@ -266,8 +266,8 @@ const Home = () => {
                 <section className="bg-[#4e31aa] text-white text-center py-12 px-4">
                     <h2 className="text-2xl font-bold ">Ready to Build Your Resume?</h2>
                     <p className="mt-4 text-lg">Join thousands of satisfied users today.</p>
-                    <button className="mt-8 bg-white text-[#4e31aa] font-bold py-2 px-6 rounded-full transition transform hover:scale-105" onClick={() => navigate('/login')}>
-                        Get Started
+                    <button className="mt-8 bg-white text-[#4e31aa] font-bold py-2 px-6 rounded-full transition transform hover:scale-105" onClick={() => navigate('/register')}>
+                        Register Here
                     </button>
                 </section>
                 <hr className='bg-blue-100' />

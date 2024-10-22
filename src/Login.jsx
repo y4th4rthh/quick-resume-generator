@@ -125,7 +125,7 @@ const Login = () => {
                             <li>
                                 <a
                                     onClick={() => navigate('/')}
-                                    className="block py-2 px-3 text-[#4e31aa] hover:text-[#4e31aa] bg-[#4e31aa] rounded md:bg-transparent hover:text-white  md:p-0"
+                                    className="block py-2 px-3 text-[#4e31aa] hover:text-[#4e31aa] bg-[#4e31aa] rounded md:bg-transparent   md:p-0"
                                     aria-current="page"
                                 >
                                     Home
