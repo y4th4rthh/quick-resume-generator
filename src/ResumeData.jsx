@@ -9,7 +9,7 @@ import MobileViewHome from './MobileViewHome';
 const ResumeData = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { editData } = location.state;
+    const { editData } = location.state || {};
     // const { usrData } = location.state;
     const [greeting, setGreeting] = useState('');
 
