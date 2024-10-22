@@ -268,7 +268,7 @@ const DisplayExistingResume = () => {
 
                 <div className='mt-12'>
                     <marquee style={{ whiteSpace: 'nowrap', animation: 'scroll 20s linear infinite' }}>
-                        <ol className="text-[#4e31aa] font-semibold text-sm text-right p-0 m-0 list-none">
+                        <ol className="text-[#4e31aa] font-semibold text-sm text-right p-0 m-0 list-none hidden sm:block">
                             <li className="inline-block ml-2">
                                 <span className="bullet">•</span> Click the "Generate Resume" button above to start creating your resume.
                             </li>
@@ -287,6 +287,14 @@ const DisplayExistingResume = () => {
                             <li className="inline-block ml-2">
                                 <span className="bullet">•</span> For assistance or technical support, please contact our support team.
                             </li>
+                        </ol>
+
+                        <ol className="text-[#4e31aa] font-semibold text-sm text-right p-0 m-0 list-none sm:hidden">
+                    
+                            <li className="inline-block ml-2">
+                                <span className="bullet">•</span> Download your resume from the PC devices as we currently dont support downloads on mobile/tablet devices!!.
+                            </li>
+                           
                         </ol>
 
                     </marquee>
