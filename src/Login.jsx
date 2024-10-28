@@ -241,16 +241,16 @@ const Login = () => {
                 </div>
             </nav>
 
-            <div className="font-rubik flex justify-center sm:min-h-screen" style={{  backgroundColor: '#f3f4f6', paddingTop: '6rem' }}>
+            <div className="font-rubik flex justify-center sm:min-h-screen sm:bg-[#F3F4F6]" style={{   paddingTop: '6rem' }}>
 
                 <div className='flex-row flex-wrap justify-center my-auto'>
-                    <div className="flex-row " style={{ position: 'relative', padding: '4rem', width: '100%', minWidth: '20rem', marginBottom: '3rem', backgroundColor: '#ffffff', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
+                    <div className="flex-row sm:min-w-[20rem] sm:bg-[#ffffff]" style={{ position: 'relative', padding: '4rem', width: '100%', marginBottom: '3rem',  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
                         <div className="head text-xl sm:text-4xl  font-bold flex justify-center mb-8 text-black">
                             Login your Account
                         </div>
 
                         <div className="sub-head text-sm flex-col flex-wrap">
-                            <div style={{ maxWidth: '20rem', margin: '0 auto' }}>
+                            <div className="sm:min-w-[20rem]" style={{  margin: '0 auto' }}>
                                 <div style={{ marginBottom: '1.2rem' }}>
                                     <label htmlFor="fname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                         Enter Name <span style={{ color: '#ef4444' }}>*</span>
