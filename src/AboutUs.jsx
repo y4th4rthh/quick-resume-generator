@@ -172,7 +172,7 @@ const AboutUs = () => {
                     )}
                 </div>
             </nav>
-            <div className="bg-white sm:pt-11 pt-28">
+            <div className="bg-white sm:pt-11 pt-24">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
                     <h1 className="text-4xl font-bold">About Us</h1>
                     <p className="mt-4 text-lg">Learn more about our mission, values, and team.</p>
