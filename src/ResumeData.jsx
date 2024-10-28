@@ -424,7 +424,7 @@ const ResumeData = () => {
 
             <div className="font-rubik flex justify-center mb-11 sm:min-h-screen" style={{ width: '100%',  backgroundColor: '#f3f4f6', paddingTop: '7rem'}}>
 
-                <div className="flex-row sm:bg-[#ffffff]" style={{ position: 'relative', padding: '4rem', width: '1000px', minWidth: '20rem', marginBottom: '3rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
+                <div className="flex-row bg-[#ffffff]" style={{ position: 'relative', padding: '4rem', width: '1000px', minWidth: '20rem', marginBottom: '3rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
 
                     <div className="head text-xl sm:text-4xl font-bold flex justify-center mb-8 text-black">
                         Enter Your Details
@@ -432,7 +432,7 @@ const ResumeData = () => {
                     <div className='mb-5 text-2xl m-auto text-gray-600' style={{marginLeft:'7%'}}>{greeting}</div>
                     {/* , {usrData.fullName} */}
                     <div className="sub-head text-sm flex flex-wrap">
-                        <div className="sm:min-w-[20rem]" style={{ margin: '0 auto' }}>
+                        <div  style={{minWidth: '20rem', margin: '0 auto' }}>
                             <div style={{ marginBottom: '1.4rem' }}>
                                 <label htmlFor="fname" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.5rem' }}>
                                     Full Name <span style={{ color: '#ef4444' }}>*</span>

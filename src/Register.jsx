@@ -242,7 +242,7 @@ const ResumeData = () => {
             <div className="font-rubik flex justify-center sm:min-h-screen sm:bg-[#F3F4F6]" style={{ paddingTop: '6rem' }}>
 
                 <div className='flex-row flex-wrap justify-center my-auto'>
-                    <div className="flex-row sm:min-w-[20rem] sm:bg-[#ffffff]" style={{ position: 'relative', padding: '4rem', width: '100%',  marginBottom: '3rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
+                    <div className="flex-row sm:min-w-[20rem] bg-[#ffffff]" style={{ position: 'relative', padding: '4rem', width: '100%',  marginBottom: '3rem', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
                         <div className="head text-lg sm:text-4xl font-bold flex justify-center mb-8 text-black">
                             Register your Details
                         </div>
