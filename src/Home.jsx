@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import MobileViewHome from './MobileViewHome';
 
 
@@ -8,6 +8,27 @@ import MobileViewHome from './MobileViewHome';
 
 const Home = () => {
     const navigate = useNavigate();
+
+      const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {   
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, []);
 
     const handleLogin = () => {
         navigate('/login');
@@ -52,6 +73,9 @@ const Home = () => {
                         >
                             Login
                         </button>
+                       <button onClick={toggleMenu} className="md:hidden">
+          {isOpen ? <div className="w-6 h-6" > 0 </div> : <div className="w-6 h-6">1</div>}
+        </button>
 
                     </div>
                     <div
@@ -93,6 +117,7 @@ const Home = () => {
                         </ul>
                     </div>
 
+                     {isOpen && (
                     <div
                         className=" items-center justify-between md:hidden w-full md:w-auto md:order-1 "
                         id="navbar-sticky"
@@ -131,6 +156,7 @@ const Home = () => {
                             </li>
                         </ul>
                     </div>
+                     )}
 
                 </div>
             </nav>
