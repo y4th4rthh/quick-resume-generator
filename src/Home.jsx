@@ -94,7 +94,7 @@ const Home = () => {
                     </div>
 
                     <div
-                        className="hidden group-hover:block items-center justify-between md:hidden w-full md:w-auto md:order-1 "
+                        className=" items-center justify-between md:hidden w-full md:w-auto md:order-1 "
                         id="navbar-sticky"
                     >
                         <ul
