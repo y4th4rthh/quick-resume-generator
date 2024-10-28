@@ -141,7 +141,7 @@ const Home = () => {
 
                     {isOpen && (
                         <div
-                            className=" items-center justify-between md:hidden w-full md:w-auto md:order-1 "
+                            className="transform transition-transform duration-300 ease-in-out items-center justify-between md:hidden w-full md:w-auto md:order-1 "
                             id="navbar-sticky"
                         >
                             <ul
