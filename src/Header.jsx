@@ -1,11 +1,35 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
+
 const Header = () => {
     const navigate = useNavigate();
-    const handleLogout = () => {        
+
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, []);
+
+    const handleLogout = () => {
         navigate('/');
     }
     return (
-       <nav
+        <nav
             className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200  font-rubik"
         >
             <div
@@ -15,7 +39,7 @@ const Header = () => {
                     onClick={() => navigate('/')}
                     className="flex items-center space-x-3 rtl:space-x-reverse"
                 >
-                    
+
                     <span
                         className="self-center text-2xl font-semibold whitespace-nowrap text-[#4e31aa] "
                     >
@@ -30,7 +54,32 @@ const Header = () => {
                     >
                         Log Out
                     </button>
-                   
+
+                    <button onClick={toggleMenu} className="md:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6 text-gray-500"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            {isOpen ? (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            ) : (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16m-7 6h7"
+                                />
+                            )}
+                        </svg>
+                    </button>
                 </div>
                 <div
                     className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -41,7 +90,7 @@ const Header = () => {
                     >
                         <li>
                             <a
-                                
+
                                 className="block py-2 px-3 text-white bg-[#4e31aa]  rounded md:bg-transparent md:text-[#4e31aa] hover:text-[#4e31aa] md:p-0 "
                                 aria-current="page"
                             >
@@ -56,7 +105,7 @@ const Header = () => {
                                 Search Resume
                             </a>
                         </li>
-                       
+
                         <li>
                             <a
                                 onClick={() => navigate('/contactuss')}
@@ -67,7 +116,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-
+                {isOpen && (
                 <div
                     className="items-center justify-between md:hidden w-full md:w-auto md:order-1"
                     id="navbar-sticky"
@@ -77,7 +126,7 @@ const Header = () => {
                     >
                         <li>
                             <a
-                                
+
                                 className="block py-2 px-3 text-white bg-[#4e31aa] rounded md:bg-transparent md:text-[#4e31aa] hover:text-white md:p-0 "
                                 aria-current="page"
                             >
@@ -92,7 +141,7 @@ const Header = () => {
                                 Search Resume
                             </a>
                         </li>
-                       
+
                         <li>
                             <a
                                 onClick={() => navigate('/contactuss')}
@@ -103,7 +152,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-
+            )}
             </div>
         </nav>
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect,useRef } from 'react';
 import React from 'react';
 import { ToastContainer,toast,Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,6 +13,27 @@ const ContactUs = () => {
         handleFormSubmit();
     };
     const navigate = useNavigate();
+
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, []);
     
     const [formData, setFormData] = useState({
         fullName: '',
@@ -116,6 +137,31 @@ const ContactUs = () => {
                         >
                             Login
                         </button>
+                        <button onClick={toggleMenu} className="md:hidden">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                {isOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 6h16M4 12h16m-7 6h7"
+                                    />
+                                )}
+                            </svg>
+                        </button>
                         
                     </div>
                     <div
@@ -155,7 +201,7 @@ const ContactUs = () => {
                             </li>
                         </ul>
                     </div>
-
+                    {isOpen && (
                     <div
                         className="items-center justify-between md:hidden w-full  md:w-auto md:order-1 "
                         id="navbar-sticky"
@@ -193,9 +239,10 @@ const ContactUs = () => {
                             </li>
                         </ul>
                     </div>
+                    )}
                 </div>
             </nav>
-            <div className="relative flex items-top justify-center min-h-screen bg-white  sm:items-center mt-28 sm:mt-0 sm:pt-0">
+            <div className="relative flex items-top justify-center min-h-screen bg-white  sm:items-center pt-28  sm:pt-0">
                 <div className="max-w-6xl mx-auto my-auto sm:px-6 lg:px-8">
                     <div className="mt-8 overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2">

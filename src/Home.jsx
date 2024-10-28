@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState,useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import MobileViewHome from './MobileViewHome';
 
 
@@ -9,26 +9,26 @@ import MobileViewHome from './MobileViewHome';
 const Home = () => {
     const navigate = useNavigate();
 
-      const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+    const toggleMenu = () => setIsOpen(!isOpen);
 
-  useEffect(() => {   
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
-  }, []);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, []);
 
     const handleLogin = () => {
         navigate('/login');
@@ -38,7 +38,7 @@ const Home = () => {
         navigate('/aboutus');
     };
 
-   
+
 
     return (
 
@@ -73,9 +73,31 @@ const Home = () => {
                         >
                             Login
                         </button>
-                       <button onClick={toggleMenu} className="md:hidden">
-          {isOpen ? <div className="w-6 h-6" > 0 </div> : <div className="w-6 h-6">1</div>}
-        </button>
+                        <button onClick={toggleMenu} className="md:hidden">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                {isOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 6h16M4 12h16m-7 6h7"
+                                    />
+                                )}
+                            </svg>
+                        </button>
 
                     </div>
                     <div
@@ -117,50 +139,50 @@ const Home = () => {
                         </ul>
                     </div>
 
-                     {isOpen && (
-                    <div
-                        className=" items-center justify-between md:hidden w-full md:w-auto md:order-1 "
-                        id="navbar-sticky"
-                    >
-                        <ul
-                            className="flex flex-row p-1 text-sm md:p-0 justify-between mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
+                    {isOpen && (
+                        <div
+                            className=" items-center justify-between md:hidden w-full md:w-auto md:order-1 "
+                            id="navbar-sticky"
                         >
+                            <ul
+                                className="flex flex-row p-1 text-sm md:p-0 justify-between mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
+                            >
 
 
-                            <li>
-                                <a
+                                <li>
+                                    <a
 
-                                    className="block py-2 px-3 text-white bg-[#4e31aa]  hover:text-white rounded md:bg-transparent  md:p-0 "
-                                    aria-current="page"
-                                >
-                                    Home
-                                </a>
-                            </li>
+                                        className="block py-2 px-3 text-white bg-[#4e31aa]  hover:text-white rounded md:bg-transparent  md:p-0 "
+                                        aria-current="page"
+                                    >
+                                        Home
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a
-                                    onClick={handleNavigateToAboutUs}
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0  "
-                                >
-                                    About Us
-                                </a>
-                            </li>
+                                <li>
+                                    <a
+                                        onClick={handleNavigateToAboutUs}
+                                        className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0  "
+                                    >
+                                        About Us
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0 "
-                                    onClick={() => navigate('/contactus')}
-                                >
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                     )}
+                                <li>
+                                    <a
+                                        className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#4e31aa] md:hover:text-[#4e31aa] md:p-0 "
+                                        onClick={() => navigate('/contactus')}
+                                    >
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    )}
 
                 </div>
             </nav>
-            <div className="w-screen bg-white sm:mt-8 mt-28">
+            <div className="w-screen bg-white sm:pt-8 pt-28">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
                     <h1 className="text-4xl font-bold">Create Your Professional Resume in Minutes</h1>
                     <p className="mt-4 text-lg">Get hired faster with our easy-to-use resume builder.</p>

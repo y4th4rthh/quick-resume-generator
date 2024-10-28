@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer,toast,Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,6 +19,26 @@ const Login = () => {
     const [passError, setPassError] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, []);
     
 
     const handleInputChange = (e) => {
@@ -113,6 +133,33 @@ const Login = () => {
                         >
                             Register
                         </button>
+
+                        <button onClick={toggleMenu} className="md:hidden">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                {isOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 6h16M4 12h16m-7 6h7"
+                                    />
+                                )}
+                            </svg>
+                        </button>
+
                         
                     </div>
                     <div
@@ -152,7 +199,7 @@ const Login = () => {
                             </li>
                         </ul>
                     </div>
-
+                    {isOpen && (
                     <div
                         className="items-center justify-between md:hidden w-full md:w-auto md:order-1"
                         id="navbar-sticky"
@@ -190,12 +237,11 @@ const Login = () => {
                             </li>
                         </ul>
                     </div>
-
-
+                )}
                 </div>
             </nav>
 
-            <div className="font-rubik flex justify-center sm:min-h-screen" style={{  backgroundColor: '#f3f4f6', paddingTop: '2rem', marginTop: '4rem' }}>
+            <div className="font-rubik flex justify-center sm:min-h-screen" style={{  backgroundColor: '#f3f4f6', paddingTop: '6rem' }}>
 
                 <div className='flex-row flex-wrap justify-center my-auto'>
                     <div className="flex-row " style={{ position: 'relative', padding: '4rem', width: '100%', minWidth: '20rem', marginBottom: '3rem', backgroundColor: '#ffffff', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>

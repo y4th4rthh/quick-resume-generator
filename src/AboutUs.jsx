@@ -1,10 +1,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import MobileViewHome from './MobileViewHome';
 
 const AboutUs = () => {
     const navigate = useNavigate();
+
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, []);
+
     const handleLogin = () => {
         navigate('/login');
     }
@@ -41,6 +63,32 @@ const AboutUs = () => {
                             onClick={handleLogin}
                         >
                             Login
+                        </button>
+
+                        <button onClick={toggleMenu} className="md:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                {isOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 6h16M4 12h16m-7 6h7"
+                                    />
+                                )}
+                            </svg>
                         </button>
                         
                     </div>
@@ -82,7 +130,7 @@ const AboutUs = () => {
                             </li>
                         </ul>
                     </div>
-
+                    {isOpen && (
                     <div
                         className="items-center justify-between md:hidden w-full  md:w-auto md:order-1"
                         id="navbar-sticky"
@@ -121,11 +169,10 @@ const AboutUs = () => {
                             </li>
                         </ul>
                     </div>
-
-
+                    )}
                 </div>
             </nav>
-            <div className="bg-white sm:mt-11 mt-28">
+            <div className="bg-white sm:pt-11 pt-28">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
                     <h1 className="text-4xl font-bold">About Us</h1>
                     <p className="mt-4 text-lg">Learn more about our mission, values, and team.</p>
