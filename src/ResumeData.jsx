@@ -381,6 +381,7 @@ const ResumeData = () => {
 
                     {isOpen && (
                     <div
+                        ref={dropdownRef}
                         className="transform transition-transform duration-300 ease-in-out items-center justify-between md:hidden w-full  md:w-auto md:order-1"
                         id="navbar-sticky"
                     >
