@@ -320,10 +320,10 @@ const Login = () => {
 
                             <div className='mt-2 flex justify-center'>
                                 <button
-                                  className='bg-[#4e31aa]'
+                                  className='bg-[#4e31aa] sm:min-w-[20rem]'
                                     type="submit"
                                     onClick={handleSubmit}
-                                    style={{ width: '100%', maxWidth: '20rem',padding: '0.75rem', color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
+                                    style={{ width: '100%', padding: '0.75rem', color: '#ffffff', borderRadius: '0.375rem', fontSize: '0.875rem', fontWeight: '500', cursor: 'pointer', transition: 'background-color 0.2s ease-in-out' }}
                                 >
                                     {loading ? 'Logging in...' : 'Login'}
                                 </button>
