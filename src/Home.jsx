@@ -182,7 +182,7 @@ const Home = () => {
 
                 </div>
             </nav>
-            <div className="w-screen bg-white sm:pt-8 pt-20">
+            <div className="w-screen bg-white sm:pt-8 pt-16">
                 <section className="bg-[#4e31aa] text-white text-center py-20 px-4">
                     <h1 className="text-4xl font-bold">Create Your Professional Resume in Minutes</h1>
                     <p className="mt-4 text-lg">Get hired faster with our easy-to-use resume builder.</p>
