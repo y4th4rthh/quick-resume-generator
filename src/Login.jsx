@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer,toast,Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-import { useEffect } from 'react';
 import MobileViewHome from './MobileViewHome';
 
 const Login = () => {
@@ -137,7 +136,7 @@ const Login = () => {
                         <button onClick={toggleMenu} className="md:hidden">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6 text-gray-500"
+                                className="h-6 w-6 text-gray-500 bg-white"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
