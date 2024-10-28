@@ -192,7 +192,7 @@ const ResumeData = () => {
 
                 </div>
             </nav>
-            <div className="font-rubik flex justify-center " style={{ minHeight: '100vh', backgroundColor: '#f3f4f6', paddingTop: '2rem', marginTop: '4rem' }}>
+            <div className="font-rubik flex justify-center sm:min-h-screen" style={{ backgroundColor: '#f3f4f6', paddingTop: '2rem', marginTop: '4rem' }}>
 
                 <div className='flex-row flex-wrap justify-center my-auto'>
                     <div className="flex-row " style={{ position: 'relative', padding: '4rem', width: '100%', minWidth: '20rem', marginBottom: '3rem', backgroundColor: '#ffffff', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '1rem' }}>
